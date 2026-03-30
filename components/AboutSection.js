@@ -15,30 +15,30 @@ const AboutSection = () => {
                     </p>
                 </div>
 
-                <section className='flex items-center gap-10 mx-40 py-10'>
+                <section className='flex max-lg:flex-col items-center gap-10 mx-10 xl:mx-40 py-10'>
 
                     <div className='flex shrink-0'>
                         <img
                             src="../assets/chef-1.webp"
                             alt="Chef"
-                            className='w-80 h-130 object-cover'
+                            className='w-60 h-90 sm:w-80 sm:h-130 object-cover'
                         />
                         <div className='flex flex-col'>
                             <img
                                 src="../assets/chef-2.webp"
                                 alt="Chef"
-                                className='w-70 h-65 object-cover'
+                                className='w-50 h-45 sm:w-70 sm:h-65 object-cover'
                             />
                             <img
                                 src="../assets/chef-3.webp"
                                 alt="Chef"
-                                className='w-70 h-65 object-cover'
+                                className='w-50 h-45 sm:w-70 sm:h-65 object-cover'
                             />
                         </div>
 
                     </div>
 
-                    <div className='flex flex-col items-start gap-6 text-white/80 w-1/2'>
+                    <div className='flex flex-col items-start gap-6 text-white/80 lg:w-1/2'>
                         <p className='text-white/80 leading-relaxed'>
                             At DMR Sushi, our story began with a single passion — to bring the art of
                             authentic Japanese sushi to the heart of Europe. Founded by Chef Damir, a
