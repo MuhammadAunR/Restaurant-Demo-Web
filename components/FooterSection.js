@@ -5,7 +5,7 @@ import { Map, Phone } from 'lucide-react'
 const FooterSection = () => {
     return (
         <>
-            <section className='absolute bottom-0 min-h-screen h-fit py-10 w-full'>
+            <section className='absolute min-h-[60vh] top-0 h-fit py-10 w-full'>
                 <img
                     src='../assets/footerSectionBg.webp'
                     alt='hero'

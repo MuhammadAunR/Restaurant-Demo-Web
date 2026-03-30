@@ -21,10 +21,10 @@ export default function Home() {
 
         <SpecialSection />
         <Menu />
-        {/* <DiningEvent /> */}
+        <DiningEvent />
         <AboutSection />
 
-        <footer className="min-h-screen h-fit relative">
+        <footer className="min-h-[60vh] h-fit relative">
           <FooterSection />
         </footer>
       </main>
