@@ -16,10 +16,10 @@ const HeroSection = () => {
             <div className='relative z-10 flex flex-col items-center gap-3 justify-center h-full text-white'>
 
                 <h4 className='font-stylish text-2xl tracking-wide'>Best Sushi in Town</h4>
-                <h1 className='text-6xl font-bold uppercase text-center text-primary-light'>
+                <h1 className='text-3xl md:text-5xl lg:text-6xl font-bold uppercase text-center text-primary-light'>
                     Taste the rich flavor of <br /> high quality sushi
                 </h1>
-                <p className='text-lg text-center'>
+                <p className='md:text-lg text-center'>
                     We only use the five star quality for our menu, <br /> come and get the richness in every food we serve.
                 </p>
 
