@@ -14,7 +14,7 @@ const Menu = () => {
     ]
     return (
         <>
-            <section className='bg-mist-900 min-h-screen h-fit'>
+            <section className='bg-mist-900 min-h-screen h-fit py-10'>
                 <div className='relative z-10 flex flex-col items-center gap-3 justify-center h-full text-white'>
                     <h4 className='font-stylish md:text-xl tracking-wide'>Quality food for you</h4>
                     <h1 className='text-3xl md:text-4xl font-bold uppercase text-center text-primary-light'>

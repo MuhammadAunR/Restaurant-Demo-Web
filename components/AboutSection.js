@@ -4,7 +4,7 @@ import ButtonUi from './ui/ButtonUi'
 const AboutSection = () => {
     return (
         <>
-            <section className='bg-mist-900 min-h-screen h-fit relative pb-15'>
+            <section className='bg-mist-900 min-h-screen h-fit relative py-15'>
                 <div className='relative z-10 flex flex-col items-center gap-3 justify-center h-full text-white/80'>
                     <h4 className='font-stylish text-xl tracking-wide'>About Us</h4>
                     <h1 className='text-4xl font-bold uppercase text-center text-primary-light'>

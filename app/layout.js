@@ -1,6 +1,8 @@
 import { Lora, Inter, Kaushan_Script } from "next/font/google";
 import "./globals.css";
 import DrawerContext from "./context/DrawerContext";
+import Navbar from "@/components/Navbar";
+import Drawer from "@/components/Drawer";
 
 const lora = Lora({
   variable: "--font-lora",
@@ -35,6 +37,8 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <DrawerContext>
+          <Drawer />
+          <Navbar />
           {children}
         </DrawerContext>
       </body>

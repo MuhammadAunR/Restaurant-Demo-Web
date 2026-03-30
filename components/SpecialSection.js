@@ -5,7 +5,7 @@ import { sushiFood } from './Assets'
 const SpecialSection = () => {
     return (
 
-        <section className='bg-mist-900 min-h-screen h-fit text-white'>
+        <section className='bg-mist-900 min-h-screen h-fit text-white/80 py-10'>
 
             <div className='relative z-10 flex flex-col items-center gap-3 justify-center h-full text-white'>
                 <h4 className='font-stylish text-lg md:text-xl tracking-wide'>Special Menu</h4>
