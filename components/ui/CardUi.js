@@ -27,14 +27,14 @@ export default SpecialCard
 const MenuSectionCard = ({ item, index }) => {
     const isEven = index % 2 === 0;
     return (
-        <div className={`text-white flex ${isEven ? 'flex-row' : 'flex-row-reverse'} items-center justify-center w-full gap-10`}>
+        <div className={`text-white/80 flex max-lg:flex-col ${isEven ? 'flex-row' : 'flex-row-reverse'} items-center justify-center w-full gap-10`}>
             <div className='w-150 h-95 overflow-hidden'>
                 <img src={item.src} alt={item.name} className='w-150 h-95 object-cover' />
             </div>
-            <div className='flex flex-col items-start gap-2'>
+            <div className='flex flex-col items-start max-lg:items-center gap-2'>
                 <h3 className='font-semibold text-xl text-primary-light'>{item.name}</h3>
-                <h4>{item.ingredients}</h4>
-                <h4 className='w-10/12'>{item.desc}</h4>
+                <h4 className='text-primary-dark'>{item.ingredients}</h4>
+                <h4 className='max-lg:text-center lg:w-10/12'>{item.desc}</h4>
                 <span className='font-semibold text-lg text-primary-light'>${item.price}</span>
             </div>
         </div>
@@ -64,13 +64,12 @@ export const DiningEventCard = ({ type, index }) => {
 
                 <div className={`flex items-baseline gap-3 ${isEven ? 'flex-row' : 'flex-row-reverse'}`}>
                     <span className='text-3xl font-bold text-primary'>${type.price}</span>
-                    <h2 className='font-heading font-semibold text-xl uppercase text-white tracking-widest'>
+                    <h2 className='font-heading font-semibold text-xl uppercase text-white/80 tracking-widest'>
                         {type.type} Dining
                     </h2>
                 </div>
 
-                {/* Includes */}
-                <div className='text-white/80 text-sm flex flex-col gap-1'>
+                <div className='text-white/80/80 text-sm flex flex-col gap-1'>
                     {type.includes.map((item) => (
                         <span key={item}>{item}</span>
                     ))}
