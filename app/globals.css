@@ -1,19 +1,21 @@
 @import "tailwindcss";
 
-:root {
+@theme {
   --color-primary: #F5BE32;
   --color-primary-dark: #D9A82C;
   --color-primary-light: #FBE3A1;
-
-
 }
 
 .font-heading {
-  font-family: var(--font-playfair);
+  font-family: var(--font-lora);
 }
 
 .font-body {
   font-family: var(--font-inter);
+}
+
+.font-stylish {
+  font-family: var(--font-script);
 }
 
 body {
@@ -21,5 +23,5 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-playfair);
+  font-family: var(--font-lora);
 }

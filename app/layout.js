@@ -1,15 +1,23 @@
-import { Playfair_Display, Inter } from "next/font/google";
+import { Lora, Inter, Kaushan_Script } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const lora = Lora({
+  variable: "--font-lora",
   subsets: ["latin"],
   display: "swap",
 });
 
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const script = Kaushan_Script({
+  variable: "--font-script",
+  subsets: ["latin"],
+  weight: "400", 
   display: "swap",
 });
 
@@ -22,7 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${inter.variable} h-full antialiased`}
+      className={`${lora.variable} ${inter.variable} ${script.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
