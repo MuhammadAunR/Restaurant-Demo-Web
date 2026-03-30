@@ -42,3 +42,42 @@ const MenuSectionCard = ({ item, index }) => {
 }
 
 export { MenuSectionCard }
+
+
+export const DiningEventCard = ({ type, index }) => {
+    const isEven = index % 2 === 0
+
+    return (
+        <div className='relative w-300 mx-auto h-100 overflow-hidden group'>
+
+            <img
+                src={type.src}
+                alt={type.type}
+                className='absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out'
+            />
+
+            <div className={`absolute inset-0 ${isEven ? 'bg-linear-to-l' : 'bg-linear-to-r'} via-mist-900/90 to-mist-900`}></div>
+
+
+            <div className={`relative z-10 h-full flex flex-col justify-center gap-2 px-10 ${isEven ? 'items-start' : 'items-end text-right'}`}>
+
+
+                <div className={`flex items-baseline gap-3 ${isEven ? 'flex-row' : 'flex-row-reverse'}`}>
+                    <span className='text-3xl font-bold text-primary'>${type.price}</span>
+                    <h2 className='font-heading font-semibold text-xl uppercase text-white tracking-widest'>
+                        {type.type} Dining
+                    </h2>
+                </div>
+
+                {/* Includes */}
+                <div className='text-white/80 text-sm flex flex-col gap-1'>
+                    {type.includes.map((item) => (
+                        <span key={item}>{item}</span>
+                    ))}
+                </div>
+
+            </div>
+        </div>
+    )
+}
+

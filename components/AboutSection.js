@@ -1,0 +1,66 @@
+import React from 'react'
+import ButtonUi from './ui/ButtonUi'
+
+const AboutSection = () => {
+    return (
+        <>
+            <section className='bg-mist-900 min-h-screen h-fit relative pb-15'>
+                <div className='relative z-10 flex flex-col items-center gap-3 justify-center h-full text-white/80'>
+                    <h4 className='font-stylish text-xl tracking-wide'>About Us</h4>
+                    <h1 className='text-4xl font-bold uppercase text-center text-primary-light'>
+                        Our Story
+                    </h1>
+                    <p className='text-center'>
+                        A journey for making successful luxury restaurant <br />with the best services
+                    </p>
+                </div>
+
+                <section className='flex items-center gap-10 mx-40 py-10'>
+
+                    <div className='flex shrink-0'>
+                        <img
+                            src="../assets/chef-1.webp"
+                            alt="Chef"
+                            className='w-80 h-130 object-cover'
+                        />
+                        <div className='flex flex-col'>
+                            <img
+                                src="../assets/chef-2.webp"
+                                alt="Chef"
+                                className='w-70 h-65 object-cover'
+                            />
+                            <img
+                                src="../assets/chef-3.webp"
+                                alt="Chef"
+                                className='w-70 h-65 object-cover'
+                            />
+                        </div>
+
+                    </div>
+
+                    <div className='flex flex-col items-start gap-6 text-white/80 w-1/2'>
+                        <p className='text-white/80 leading-relaxed'>
+                            At DMR Sushi, our story began with a single passion — to bring the art of
+                            authentic Japanese sushi to the heart of Europe. Founded by Chef Damir, a
+                            culinary master trained in the streets of Tokyo and the fine dining rooms of
+                            Paris, our restaurant was built on the belief that food is not just
+                            nourishment — it is an experience, a memory, a moment shared.
+                        </p>
+
+                        <p className='text-white/80 leading-relaxed'>
+                            Every roll we craft carries decades of culinary wisdom and an obsession with
+                            quality. We source only the freshest ingredients — because our guests deserve
+                            nothing less than perfection on every plate. We are not just a restaurant.
+                            We are a destination for those who appreciate the finer things in life.
+                        </p>
+                        <ButtonUi text={'More about us'} />
+                    </div>
+
+                </section>
+
+            </section>
+        </>
+    )
+}
+
+export default AboutSection

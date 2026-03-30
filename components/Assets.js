@@ -44,3 +44,26 @@ const sushiFood = [
 ]
 
 export { sushiFood }
+
+const diningTypes = [
+    {
+        type: "Fine",
+        price: 499,
+        src: "../assets/fine-dining-1.webp",
+        includes: ["Bottle of Champagne", "Fine Sushi Tower For 2+", "Dessert"],
+    },
+    {
+        type: "Gold",
+        price: 999,
+        src: "../assets/gold-dining-2.webp",
+        includes: ["Bottle of Champagne", "Secret Menu Sushi For 2+", "Dessert"],
+    },
+    {
+        type: "Luxury",
+        price: 1599,
+        src: "../assets/luxury-dining-3.webp",
+        includes: ["Bottle of Luxury Champagne", "Special Menu Sushi For 2+", "Royal Dessert"],
+    },
+]
+
+export { diningTypes }

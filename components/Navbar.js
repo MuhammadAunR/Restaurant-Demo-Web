@@ -3,6 +3,11 @@ import React from 'react'
 import ButtonUi from './ui/ButtonUi'
 
 const Navbar = () => {
+    const navLinks = [
+        { name: "Menu", href: "/menu" },
+        { name: "About", href: "/about" },
+        { name: "Contact", href: "/contact" },
+    ]
     return (
         <nav className="flex items-center justify-between py-4 px-20 bg-transparent relative z-50">
 
@@ -11,11 +16,11 @@ const Navbar = () => {
             </div>
 
             <ul className='flex gap-7 items-center justify-center font-heading text-lg text-white'>
-                {['Menu', 'Fine Dining', 'About', 'Contact'].map((item) => (
-                    <li key={item}>
-                        <Link href='/' className='relative group py-1'>
-                            <span className='group-hover:text-(--color-primary) transition-colors duration-300 uppercase'>{item}</span>
-                            <span className='absolute bottom-0 left-0 h-[1.5px] w-0 bg-(--color-primary) group-hover:w-full transition-all duration-300 ease-in-out origin-left'></span>
+                {navLinks.map((item) => (
+                    <li key={item.name}>
+                        <Link href={item.href} className='relative group py-1'>
+                            <span className='group-hover:text-primary transition-colors duration-300 uppercase'>{item.name}</span>
+                            <span className='absolute bottom-0 left-0 h-[1.5px] w-0 bg-primary group-hover:w-full transition-all duration-300 ease-in-out origin-left'></span>
                         </Link>
                     </li>
                 ))}
