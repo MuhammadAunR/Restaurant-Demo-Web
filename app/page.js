@@ -5,7 +5,6 @@ import SpecialSection from "@/components/SpecialSection";
 import FooterSection from "@/components/FooterSection";
 import AboutSection from "@/components/AboutSection";
 
-
 export default function Home() {
   return (
     <>
