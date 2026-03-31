@@ -4,10 +4,15 @@ import React from 'react'
 import ButtonUi from './ui/ButtonUi'
 import { Menu } from 'lucide-react'
 import { useDrawer } from '@/app/context/DrawerContext'
+import { usePathname, useRouter } from 'next/navigation'
+
 
 const Navbar = () => {
 
     const { toggleDrawer } = useDrawer()
+    const router = useRouter()
+    const pathname = usePathname()
+    const hiddenRoutes = ['/reservation']
 
     const navLinks = [
         { name: "Home", href: "/" },
@@ -15,6 +20,13 @@ const Navbar = () => {
         { name: "About", href: "/about" },
         { name: "Contact", href: "/contact" },
     ]
+
+    const GoToReservationPage = () => {
+        router.push('/reservation')
+    }
+
+    if (pathname.includes(hiddenRoutes)) return null
+
     return (
         <nav className="flex items-center justify-between py-4 px-10 lg:px-20 bg-transparent relative z-50">
 
@@ -33,7 +45,7 @@ const Navbar = () => {
                 ))}
             </ul>
 
-            <span className='max-lg:hidden'>
+            <span onClick={GoToReservationPage} className='max-lg:hidden'>
                 <ButtonUi text={'Reservation'} />
             </span>
 
