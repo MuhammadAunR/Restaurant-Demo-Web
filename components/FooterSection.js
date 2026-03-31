@@ -1,8 +1,16 @@
+'use client'
 import React from 'react'
 import ButtonUi from './ui/ButtonUi'
 import { Map, Phone } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 const FooterSection = () => {
+
+    const router = useRouter()
+
+    const GoToReservationPage = () => {
+        router.push('/reservation')
+    }
     return (
         <>
             <section className='absolute min-h-[60vh] top-0 h-fit py-10 w-full'>
@@ -21,7 +29,7 @@ const FooterSection = () => {
                         the best dining experiences
                     </h1>
 
-                    <span className='py-4'>
+                    <span onClick={GoToReservationPage} className='py-4'>
                         <ButtonUi text={'Reserve a table'} />
                     </span>
 
@@ -47,12 +55,11 @@ const FooterSection = () => {
                     <div className='flex items-center justify-center gap-x-10 gap-y-3 px-5 flex-wrap'>
                         <div className='flex items-center justify-center gap-4 text-primary'>
                             <span><Map /></span>
-                            <p className=''>Jendral Sudirman Street Pahoman
-                                Bandar Lampung, 35222</p>
+                            <p className=''>123 Old Town Street, Vienna, Austria</p>
                         </div>
                         <div className='flex items-center justify-center gap-4 text-primary'>
                             <span><Phone /></span>
-                            <p>+0721 471 285</p>
+                            <p>+43 1 234 5678</p>
                         </div>
                     </div>
 
