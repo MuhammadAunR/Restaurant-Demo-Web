@@ -27,7 +27,6 @@ export default function ReservationForm() {
       date: '',
       time: '',
       people: 2,
-      note: '',
       diningType: '',
     })
   const [submitted, setSubmitted] = useState(false)
@@ -69,7 +68,7 @@ export default function ReservationForm() {
           </div>
           <div className='flex flex-col gap-2'>
             <span className='font-stylish text-2xl text-primary'>Thank You</span>
-            <h2 className='font-heading text-3xl font-bold uppercase tracking-widest text-primarylight)'>
+            <h2 className='font-heading text-3xl font-bold uppercase tracking-widest text-primary-light'>
               Reservation Confirmed
             </h2>
           </div>
@@ -88,7 +87,6 @@ export default function ReservationForm() {
               ['Phone', form.phone],
               ['Dining', `${form.diningType} — $${diningTypes.find(d => d.type === form.diningType)?.price}`],
               ['People', form.people],
-              ['Note', form.note || '—'],
             ].map(([k, v]) => (
               <div key={k} className='flex justify-between text-sm'>
                 <span className='text-white/40'>{k}</span>
@@ -97,7 +95,7 @@ export default function ReservationForm() {
             ))}
           </div>
           <button
-            onClick={() => { setSubmitted(false); setForm({ fullName: '', phone: '', email: '', date: '', time: '', people: 2, note: '', vaccinePass: false, diningType: '' }) }}
+            onClick={() => { setSubmitted(false); setForm({ fullName: '', phone: '', email: '', date: '', time: '', people: 2, diningType: '' }) }}
             className='text-primary text-sm uppercase tracking-widest border-b border-primary/40 hover:border-primary transition-colors duration-200'
           >
             Make Another Reservation
