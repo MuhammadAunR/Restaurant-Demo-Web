@@ -16,20 +16,20 @@ const CartContext = ({ children }) => {
 
     const addToCart = (item) => {
         setCartItems(prev => {
-            const exists = prev.find(i => i.id === item.id)
-            if (exists) return prev.map(i => i.id === item.id ? { ...i, qty: i.qty + 1 } : i)
+            const exists = prev.find(i => i.itemId === item.itemId)
+            if (exists) return prev.map(i => i.itemId === item.itemId ? { ...i, qty: i.qty + 1 } : i)
             return [...prev, { ...item, qty: 1 }]
         })
     }
 
-    const removeFromCart = (id) => setCartItems(prev => prev.filter(i => i.id !== id))
+    const removeFromCart = (itemId) => setCartItems(prev => prev.filter(i => i.itemId !== itemId))
 
-    const increaseQty = (id) => setCartItems(prev => prev.map(i => i.id === id ? { ...i, qty: i.qty + 1 } : i))
+    const increaseQty = (itemId) => setCartItems(prev => prev.map(i => i.itemId === itemId ? { ...i, qty: i.qty + 1 } : i))
 
-    const decreaseQty = (id) => setCartItems(prev => {
-        const item = prev.find(i => i.id === id)
-        if (item.qty === 1) return prev.filter(i => i.id !== id)
-        return prev.map(i => i.id === id ? { ...i, qty: i.qty - 1 } : i)
+    const decreaseQty = (itemId) => setCartItems(prev => {
+        const item = prev.find(i => i.itemId === itemId)
+        if (item.qty === 1) return prev.filter(i => i.itemId !== itemId)
+        return prev.map(i => i.itemId === itemId ? { ...i, qty: i.qty - 1 } : i)
     })
 
     const cartTotal = cartItems.reduce((sum, i) => sum + i.price * i.qty, 0)

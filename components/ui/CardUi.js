@@ -76,3 +76,69 @@ export const DiningEventCard = ({ type, index }) => {
     )
 }
 
+import { Minus, Plus, Trash2 } from 'lucide-react'
+import { useCart } from '@/app/context/CartContext'
+
+const CartItemCard = ({ item }) => {
+    const { removeFromCart, increaseQty, decreaseQty } = useCart()
+
+    return (
+        <div className='flex gap-3 py-4 border-b border-white/8 group'>
+
+            {/* Image */}
+            <div className='w-16 h-16 shrink-0 overflow-hidden bg-mist-800'>
+                {item.src ? (
+                    <img src={item.src} alt={item.name} className='w-full h-full object-cover' />
+                ) : (
+                    <div className='w-full h-full flex items-center justify-center text-xl'
+                        style={{ background: '#1c2124', color: 'rgba(245,190,50,0.2)' }}>
+                        ❋
+                    </div>
+                )}
+            </div>
+
+            {/* Info */}
+            <div className='flex flex-col gap-1 flex-1 min-w-0'>
+                <span className='font-heading text-sm text-primary-light truncate'>{item.name}</span>
+                <span className='text-xs text-white/40 truncate'>{item.ingredients}</span>
+
+                {/* Qty + Price row */}
+                <div className='flex items-center justify-between mt-1'>
+
+                    {/* Qty controls */}
+                    <div className='flex items-center gap-2'>
+                        <button
+                            onClick={() => decreaseQty(item.itemId)}
+                            className='w-6 h-6 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary/10 transition-colors cursor-pointer'
+                        >
+                            <Minus size={10} />
+                        </button>
+                        <span className='text-sm text-white/80 w-4 text-center'>{item.qty}</span>
+                        <button
+                            onClick={() => increaseQty(item.itemId)}
+                            className='w-6 h-6 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary/10 transition-colors cursor-pointer'
+                        >
+                            <Plus size={10} />
+                        </button>
+                    </div>
+
+                    {/* Item total */}
+                    <span className='font-heading text-sm font-semibold text-primary'>
+                        ${(item.price * item.qty).toFixed(2)}
+                    </span>
+                </div>
+            </div>
+
+            {/* Remove */}
+            <button
+                onClick={() => removeFromCart(item.id)}
+                className='self-start opacity-0 group-hover:opacity-100 transition-opacity text-white/30 hover:text-red-400 cursor-pointer'
+            >
+                <Trash2 size={14} />
+            </button>
+
+        </div>
+    )
+}
+
+export { CartItemCard }

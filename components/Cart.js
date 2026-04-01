@@ -1,77 +1,18 @@
 'use client'
 import { useCart } from '@/app/context/CartContext'
 import { ShoppingBasket, X } from 'lucide-react'
-import { Minus, Plus, Trash2 } from 'lucide-react'
 import React from 'react'
 import ButtonUi from './ui/ButtonUi'
+import { CartItemCard } from './ui/CardUi'
 
 
-const CartItem = ({ item }) => {
-    const { removeFromCart, increaseQty, decreaseQty } = useCart()
 
-    return (
-        <div className='flex gap-3 py-4 border-b border-white/8 group'>
-
-            {/* Image */}
-            <div className='w-16 h-16 shrink-0 overflow-hidden bg-mist-800'>
-                {item.src ? (
-                    <img src={item.src} alt={item.name} className='w-full h-full object-cover' />
-                ) : (
-                    <div className='w-full h-full flex items-center justify-center text-xl'
-                        style={{ background: '#1c2124', color: 'rgba(245,190,50,0.2)' }}>
-                        ❋
-                    </div>
-                )}
-            </div>
-
-            {/* Info */}
-            <div className='flex flex-col gap-1 flex-1 min-w-0'>
-                <span className='font-heading text-sm text-primary-light truncate'>{item.name}</span>
-                <span className='text-xs text-white/40 truncate'>{item.ingredients}</span>
-
-                {/* Qty + Price row */}
-                <div className='flex items-center justify-between mt-1'>
-
-                    {/* Qty controls */}
-                    <div className='flex items-center gap-2'>
-                        <button
-                            onClick={() => decreaseQty(item.id)}
-                            className='w-6 h-6 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary/10 transition-colors cursor-pointer'
-                        >
-                            <Minus size={10} />
-                        </button>
-                        <span className='text-sm text-white/80 w-4 text-center'>{item.qty}</span>
-                        <button
-                            onClick={() => increaseQty(item.id)}
-                            className='w-6 h-6 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary/10 transition-colors cursor-pointer'
-                        >
-                            <Plus size={10} />
-                        </button>
-                    </div>
-
-                    {/* Item total */}
-                    <span className='font-heading text-sm font-semibold text-primary'>
-                        ${(item.price * item.qty).toFixed(2)}
-                    </span>
-                </div>
-            </div>
-
-            {/* Remove */}
-            <button
-                onClick={() => removeFromCart(item.id)}
-                className='self-start opacity-0 group-hover:opacity-100 transition-opacity text-white/30 hover:text-red-400 cursor-pointer'
-            >
-                <Trash2 size={14} />
-            </button>
-
-        </div>
-    )
-}
 
 const Cart = () => {
 
     const { toggleCart, isCartOpen, cartItems, cartTotal, handleCheckOut } = useCart()
 
+    // console.log(cartItems)
 
     return (
 
@@ -100,9 +41,9 @@ const Cart = () => {
                             <button onClick={toggleCart} className='text-white/80 hover:text-primary-light cursor-pointer text-lg'>Add items from the menu</button>
                         </div>
                     }
-                    <div>
+                    <div className='flex flex-col'>
                         {cartItems.map(item => (
-                            <CartItem key={item.name} item={item} />
+                            <CartItemCard key={item.name} item={item} />
                         ))}
                     </div>
 
@@ -112,10 +53,10 @@ const Cart = () => {
                 <div className='p-5 border-t border-white/10 shrink-0 flex flex-col items-end gap-5'>
                     <div className='flex items-center justify-between w-full'>
                         <h4 className='text-xl font-semibold text-primary-light'>SubTotal</h4>
-                        <span className='text-red-500 text-lg'>${cartTotal}</span>
+                        <span className='text-red-500 text-lg font-bold font-heading'>${cartTotal.toFixed(2)}</span>
                     </div>
-                    <span onClick={handleCheckOut}>
-                    <ButtonUi   text={'Checkout'} />
+                    <span onClick={handleCheckOut} className={``}>
+                        <ButtonUi text={'Checkout'} />
                     </span>
                 </div>
 

@@ -25,3 +25,24 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-lora);
 }
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #FBE3A1 #0f1113;
+}
+
+html::-webkit-scrollbar {
+  width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #0f1113;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #F5BE32;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #D9A82C;
+}
