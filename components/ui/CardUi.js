@@ -131,7 +131,7 @@ const CartItemCard = ({ item }) => {
 
             {/* Remove */}
             <button
-                onClick={() => removeFromCart(item.id)}
+                onClick={() => removeFromCart(item.itemId)}
                 className='self-start opacity-0 group-hover:opacity-100 transition-opacity text-white/30 hover:text-red-400 cursor-pointer'
             >
                 <Trash2 size={14} />

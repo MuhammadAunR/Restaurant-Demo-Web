@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Drawer from "@/components/Drawer";
 import Cart from "@/components/Cart";
 import AppWrapper from "./context/AppWrapper";
+import { Toaster } from "react-hot-toast";
 
 const lora = Lora({
   variable: "--font-lora",
@@ -38,6 +39,20 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <AppWrapper>
+          <Toaster
+            position="top-center"
+            toastOptions={{
+              duration: 3000,
+              style: {
+                background: '#1e2326',
+                color: '#FBE3A1',
+                border: '1px solid rgba(245,190,50,0.3)',
+                fontFamily: 'serif',
+                fontSize: '1rem',
+                letterSpacing: '0.05em',
+              },
+            }}
+          />
           <Drawer />
           <Navbar />
           <Cart />

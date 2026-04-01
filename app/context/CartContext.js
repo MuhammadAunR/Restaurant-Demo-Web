@@ -1,5 +1,6 @@
 'use client'
 import React, { createContext, useContext, useState } from 'react'
+import toast from 'react-hot-toast'
 
 export const ContextProvider = createContext()
 
@@ -15,6 +16,7 @@ const CartContext = ({ children }) => {
     }
 
     const addToCart = (item) => {
+        toast.success('Added to cart')
         setCartItems(prev => {
             const exists = prev.find(i => i.itemId === item.itemId)
             if (exists) return prev.map(i => i.itemId === item.itemId ? { ...i, qty: i.qty + 1 } : i)
@@ -22,7 +24,15 @@ const CartContext = ({ children }) => {
         })
     }
 
-    const removeFromCart = (itemId) => setCartItems(prev => prev.filter(i => i.itemId !== itemId))
+    const removeFromCart = (itemId) => {
+        const confirmed = window.confirm('Are you sure to remove from cart ?')
+        if (confirmed) {
+            setCartItems(prev => prev.filter(i => i.itemId !== itemId))
+            toast('Removed from cart')
+        } else {
+            toast('Item not removed')
+        }
+    }
 
     const increaseQty = (itemId) => setCartItems(prev => prev.map(i => i.itemId === itemId ? { ...i, qty: i.qty + 1 } : i))
 
@@ -36,7 +46,13 @@ const CartContext = ({ children }) => {
     const cartCount = cartItems.reduce((sum, i) => sum + i.qty, 0)
 
     const handleCheckOut = () => {
-        setCartItems([])
+        const confirmed = window.confirm('Are you sure to Checkout ?')
+        if(confirmed){
+            setCartItems([])
+            toast.success('Successfully Checked Out')
+        }else{
+            toast('Checkout Cancelled')
+        }
     }
 
     return (
