@@ -12,6 +12,7 @@ const Cart = () => {
 
         <main className='w-full flex'>
             {isCartOpen && <section
+                onClick={toggleCart}
                 className={`bg-black/40 backdrop-blur-md h-screen w-full fixed top-0 z-200`}>
             </section>
             }
