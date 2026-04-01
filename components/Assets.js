@@ -78,6 +78,7 @@ const menuData = [
             {
                 itemId: 'specialities-01',
                 name: 'Dragon Emperor Roll', price: '28.99',
+                src: '../assets/specialities-1.webp',
                 ingredients: 'Lobster · Black Tobiko · Truffle Oil · Avocado · Gold Leaf',
                 desc: 'Our crown jewel — a luxurious roll of butter-poached lobster, hand-rolled with premium black tobiko and finished with a whisper of white truffle oil.',
                 spice: 2, tag: 'Signature', badge: "Chef's Special", symbol: '❋', featured: true,
@@ -85,6 +86,7 @@ const menuData = [
             {
                 itemId: 'specialities-02',
                 name: 'Volcano Roll', price: '19.99',
+                src: '../assets/specialities-2.webp',
                 ingredients: 'Scallop · Crab · Masago · Spicy Mayo',
                 desc: 'Baked to perfection, topped with a spicy scallop and crab mix that cascades over sesame rice like molten fire.',
                 spice: 3, tag: 'Spicy', symbol: '✦',
@@ -92,6 +94,7 @@ const menuData = [
             {
                 itemId: 'specialities-03',
                 name: 'Rainbow Roll', price: '21.99',
+                src: '../assets/specialities-3.webp',
                 ingredients: 'Crab · Tuna · Salmon · Shrimp · Yellowtail',
                 desc: 'A California base crowned with a vibrant spectrum of fresh sashimi — a feast for the eyes as much as the palate.',
                 spice: 1, tag: 'Popular', symbol: '◈',
@@ -107,6 +110,7 @@ const menuData = [
             {
                 itemId: 'sushi-01',
                 name: 'Spicy Tuna Roll', price: '15.99',
+                src: '../assets/sushi-10.webp',
                 ingredients: 'Tuna · Sriracha · Cucumber · Sesame',
                 desc: 'Premium tuna blended with sriracha heat, wrapped in nori with crunchy cucumber and sesame-crusted rice.',
                 spice: 3, tag: 'Spicy', symbol: '⊛',
@@ -114,6 +118,7 @@ const menuData = [
             {
                 itemId: 'sushi-02',
                 name: 'Philadelphia Roll', price: '13.99',
+                src: '../assets/sushi-11.webp',
                 ingredients: 'Smoked Salmon · Cream Cheese · Cucumber',
                 desc: 'A western classic — silky smoked salmon paired with rich cream cheese and crisp cucumber.',
                 spice: 1, tag: 'Classic', symbol: '◉',
@@ -121,6 +126,7 @@ const menuData = [
             {
                 itemId: 'sushi-03',
                 name: 'Dragon Roll', price: '18.99',
+                src: '../assets/sushi-12.webp',
                 ingredients: 'Shrimp Tempura · Avocado · Eel Sauce',
                 desc: 'Crispy shrimp tempura topped with creamy avocado, drizzled with sweet eel sauce and spicy mayo.',
                 spice: 2, tag: 'Bestseller', symbol: '❋',
@@ -136,6 +142,7 @@ const menuData = [
             {
                 itemId: 'nigiri-01',
                 name: 'Salmon Nigiri', price: '14.99',
+                src: '../assets/nigiri-1.webp',
                 ingredients: 'Atlantic Salmon · Sushi Rice · Wasabi',
                 desc: 'Delicate slices of fresh Atlantic salmon hand-pressed over perfectly seasoned sushi rice with a touch of wasabi.',
                 spice: 1, tag: 'Fresh Daily', symbol: '✦',
@@ -143,6 +150,7 @@ const menuData = [
             {
                 itemId: 'nigiri-02',
                 name: 'Otoro Tuna Nigiri', price: '24.99',
+                src: '../assets/nigiri-2.webp',
                 ingredients: 'Bluefin Otoro · Rice · Micro Shiso',
                 desc: 'The most prized cut of bluefin — intensely marbled, buttery otoro that dissolves on the palate. Served with micro shiso.',
                 spice: 1, tag: 'Premium', badge: 'Premium', symbol: '◈',
@@ -150,6 +158,7 @@ const menuData = [
             {
                 itemId: 'nigiri-03',
                 name: 'Yellowtail Nigiri', price: '16.99',
+                src: '../assets/nigiri-3.webp',
                 ingredients: 'Hamachi · Rice · Yuzu Zest · Jalapeño',
                 desc: 'Silky hamachi elevated with bright yuzu zest and a whisper of jalapeño heat for a clean, citrus-forward finish.',
                 spice: 2, tag: 'Seasonal', symbol: '⊛',
@@ -165,6 +174,7 @@ const menuData = [
             {
                 itemId: 'cocktails-01',
                 name: 'Tokyo Mist', price: '16.00',
+                src: '../assets/cocktails-1.webp',
                 ingredients: 'Sake · Yuzu · Elderflower · Prosecco',
                 desc: "A luminous, effervescent cocktail inspired by Tokyo's neon skyline — light, floral, and gently warming.",
                 spice: 1, tag: 'Signature', symbol: '◉',
@@ -172,6 +182,7 @@ const menuData = [
             {
                 itemId: 'cocktails-02',
                 name: 'Golden Hour', price: '18.00',
+                src: '../assets/cocktails-2.webp',
                 ingredients: 'Whisky · Honey · Ginger · Lemon · Gold Dust',
                 desc: 'A bold, amber cocktail finished with edible gold dust — perfect to accompany our premium nigiri selection.',
                 spice: 2, tag: 'Premium', symbol: '✦',
@@ -179,6 +190,7 @@ const menuData = [
             {
                 itemId: 'cocktails-03',
                 name: 'Sakura Blush', price: '14.00',
+                src: '../assets/cocktails-3.webp',
                 ingredients: 'Gin · Rose · Lychee · Cherry Blossom Syrup',
                 desc: 'A delicate blush cocktail with the floral sweetness of cherry blossom — as beautiful to look at as it is to sip.',
                 spice: 1, tag: 'Floral', symbol: '❋',
@@ -194,6 +206,7 @@ const menuData = [
             {
                 itemId: 'desserts-01',
                 name: 'Matcha Lava Cake', price: '12.00',
+                src: '../assets/desserts-1.webp',
                 ingredients: 'Ceremonial Matcha · Dark Chocolate · Cream',
                 desc: 'A warm, molten-centered cake of ceremonial grade matcha with a dark chocolate lava core. Served with yuzu cream.',
                 spice: 1, tag: 'Warm', symbol: '◈',
@@ -201,6 +214,7 @@ const menuData = [
             {
                 itemId: 'desserts-02',
                 name: 'Black Sesame Mochi', price: '9.00',
+                src: '../assets/desserts-2.webp',
                 ingredients: 'Glutinous Rice · Black Sesame · Red Bean',
                 desc: 'Handmade mochi filled with a smooth black sesame and red bean paste — a traditional ending to a luxurious meal.',
                 spice: 1, tag: 'Traditional', badge: "Chef's Choice", symbol: '⊛',
@@ -208,6 +222,7 @@ const menuData = [
             {
                 itemId: 'desserts-03',
                 name: 'Gold Leaf Tiramisu', price: '14.00',
+                src: '../assets/desserts-3.webp',
                 ingredients: 'Mascarpone · Espresso · Sake · Gold Leaf',
                 desc: 'Our east-meets-west tiramisu — classic Italian technique with sake-soaked ladyfingers, crowned with edible gold leaf.',
                 spice: 1, tag: 'Signature', symbol: '◉',
