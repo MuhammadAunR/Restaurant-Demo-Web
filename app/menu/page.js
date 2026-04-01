@@ -26,7 +26,9 @@ const SpiceDots = ({ level }) => (
 
 // ── Menu Item Card ──────────────────────────────────
 const MenuCard = ({ item, featured = false }) => {
-    const { getProduct } = useCart()
+
+    const { addToCart } = useCart()
+
     return (
         <div className={`relative flex overflow-hidden cursor-pointer border border-primary/20 hover:border-primary/50 transition-all duration-300 group bg-mist-800 ${featured ? 'flex-col sm:flex-row col-span-full' : 'flex-col'}`}>
 
@@ -50,7 +52,7 @@ const MenuCard = ({ item, featured = false }) => {
                         {item.badge}
                     </span>
                 )}
-                <button onClick={() => getProduct(item)} className='absolute bottom-3 right-3 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 bg-primary text-black text-xs font-semibold tracking-widest uppercase px-3 py-1.5 border-none cursor-pointer'>
+                <button onClick={() => addToCart(item)} className='absolute bottom-3 right-3 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 bg-primary text-black text-xs font-semibold tracking-widest uppercase px-3 py-1.5 border-none cursor-pointer'>
                     Order Now
                 </button>
             </div>
@@ -62,7 +64,7 @@ const MenuCard = ({ item, featured = false }) => {
                     </span>
                     <div className='flex-1 self-center border-b border-dotted border-primary/20 mx-2' />
                     <span style={{ fontFamily: 'serif' }} className='text-lg font-semibold text-primary whitespace-nowrap shrink-0'>
-                        {item.price}
+                        $ {item.price}
                     </span>
                 </div>
 
