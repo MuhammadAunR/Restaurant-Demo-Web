@@ -1,6 +1,7 @@
 'use client'
 import { menuData } from '@/components/Assets'
 import { useState } from 'react'
+import { useCart } from '../context/CartContext'
 
 const tabs = [
     { id: 'all', label: 'All' },
@@ -25,6 +26,7 @@ const SpiceDots = ({ level }) => (
 
 // ── Menu Item Card ──────────────────────────────────
 const MenuCard = ({ item, featured = false }) => {
+    const { getProduct } = useCart()
     return (
         <div className={`relative flex overflow-hidden cursor-pointer border border-primary/20 hover:border-primary/50 transition-all duration-300 group bg-mist-800 ${featured ? 'flex-col sm:flex-row col-span-full' : 'flex-col'}`}>
 
@@ -48,7 +50,7 @@ const MenuCard = ({ item, featured = false }) => {
                         {item.badge}
                     </span>
                 )}
-                <button className='absolute bottom-3 right-3 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 bg-primary text-black text-xs font-semibold tracking-widest uppercase px-3 py-1.5 border-none cursor-pointer'>
+                <button onClick={() => getProduct(item)} className='absolute bottom-3 right-3 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 bg-primary text-black text-xs font-semibold tracking-widest uppercase px-3 py-1.5 border-none cursor-pointer'>
                     Order Now
                 </button>
             </div>

@@ -201,4 +201,4 @@ const menuData = [
     },
 ]
 
-export {menuData}
+export { menuData }

@@ -2,14 +2,17 @@
 import Link from 'next/link'
 import React from 'react'
 import ButtonUi from './ui/ButtonUi'
-import { Menu } from 'lucide-react'
+import { Menu, ShoppingBag } from 'lucide-react'
 import { useDrawer } from '@/app/context/DrawerContext'
 import { usePathname, useRouter } from 'next/navigation'
+import { useCart } from '@/app/context/CartContext'
 
 
 const Navbar = () => {
 
     const { toggleDrawer } = useDrawer()
+    const { toggleCart } = useCart()
+
     const router = useRouter()
     const pathname = usePathname()
     const hiddenRoutes = ['/reservation']
@@ -45,13 +48,26 @@ const Navbar = () => {
                 ))}
             </ul>
 
-            <span onClick={GoToReservationPage} className='max-lg:hidden'>
-                <ButtonUi text={'Reservation'} />
-            </span>
+            <div className='max-lg:hidden flex items-center gap-5'>
 
-            <button onClick={toggleDrawer} className='lg:hidden text-primary '>
-                <Menu size={30} />
-            </button>
+                <span onClick={GoToReservationPage}>
+                    <ButtonUi text={'Reservation'} />
+                </span>
+
+                <span onClick={toggleCart} className='text-primary bg-black/40 hover:bg-black/70 transition-colors ease-linear p-3 rounded-full'>
+                    <ShoppingBag size={22} />
+                </span>
+
+            </div>
+
+            <div className='flex items-center gap-2 lg:hidden'>
+                <button onClick={toggleDrawer} className='text-primary '>
+                    <Menu size={30} />
+                </button>
+                <span onClick={toggleCart} className='text-primary hover:text-primary-light transition-colors ease-linear p-3 rounded-full'>
+                    <ShoppingBag size={22} />
+                </span>
+            </div>
         </nav>
     )
 }

@@ -1,8 +1,9 @@
 import { Lora, Inter, Kaushan_Script } from "next/font/google";
 import "./globals.css";
-import DrawerContext from "./context/DrawerContext";
 import Navbar from "@/components/Navbar";
 import Drawer from "@/components/Drawer";
+import Cart from "@/components/Cart";
+import AppWrapper from "./context/AppWrapper";
 
 const lora = Lora({
   variable: "--font-lora",
@@ -36,11 +37,12 @@ export default function RootLayout({ children }) {
       className={`${lora.variable} ${inter.variable} ${script.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <DrawerContext>
+        <AppWrapper>
           <Drawer />
           <Navbar />
+          <Cart />
           {children}
-        </DrawerContext>
+        </AppWrapper>
       </body>
     </html>
   );
