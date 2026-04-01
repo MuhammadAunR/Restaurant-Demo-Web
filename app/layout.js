@@ -6,6 +6,7 @@ import Cart from "@/components/Cart";
 import AppWrapper from "./context/AppWrapper";
 import { Toaster } from "react-hot-toast";
 import FooterSection from "@/components/FooterSection";
+import AosInit from "@/components/AosInit";
 
 const lora = Lora({
   variable: "--font-lora",
@@ -54,6 +55,7 @@ export default function RootLayout({ children }) {
               },
             }}
           />
+          <AosInit />
           <Drawer />
           <Cart />
           <div className="min-h-screen flex flex-col">

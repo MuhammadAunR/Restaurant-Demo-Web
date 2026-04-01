@@ -16,20 +16,20 @@ const page = () => {
         <div className='absolute bottom-0 right-0 w-56 h-56 md:w-80 md:h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none' />
 
         <div className='relative z-10 flex flex-col items-center gap-3 pt-16 md:pt-24 pb-10 md:pb-16 px-6 text-center'>
-          <span className='font-stylish text-xl md:text-2xl text-primary tracking-wide'>
+          <span data-aos='fade-up' className='font-stylish text-xl md:text-2xl text-primary tracking-wide'>
             About Us
           </span>
 
           <div className='flex items-center gap-3'>
-            <span className='h-px w-12 bg-primary/50'></span>
-            <span className='w-1.5 h-1.5 rotate-45 bg-primary'></span>
-            <span className='h-px w-12 bg-primary/50'></span>
+            <span data-aos='fade-right' className='h-px w-12 bg-primary/50'></span>
+            <span data-aos='zoom-in' className='w-1.5 h-1.5 rotate-45 bg-primary'></span>
+            <span data-aos='fade-left' className='h-px w-12 bg-primary/50'></span>
           </div>
 
-          <h1 className='font-heading text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-widest text-primarylight) mt-2'>
+          <h1 data-aos='fade-up' className='font-heading text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-widest text-primarylight) mt-2'>
             Our Story
           </h1>
-          <p className='text-white/50 text-xs sm:text-sm tracking-widest uppercase'>
+          <p data-aos='fade-up' className='text-white/50 text-xs sm:text-sm tracking-widest uppercase'>
             A journey of craft, passion & luxury
           </p>
         </div>
@@ -39,7 +39,7 @@ const page = () => {
 
             <div className='relative h-72 sm:h-96 lg:h-145'>
 
-              <div className='absolute top-0 left-0 w-44 sm:w-60 lg:w-72 h-60 sm:h-80 lg:h-96 overflow-hidden'>
+              <div data-aos='zoom-in' className='absolute top-0 left-0 w-44 sm:w-60 lg:w-72 h-60 sm:h-80 lg:h-96 overflow-hidden'>
                 <div className='absolute inset-0 ring-1 ring-primary/30 z-10 pointer-events-none' />
                 <img
                   src='/assets/chef-1.webp'
@@ -48,7 +48,7 @@ const page = () => {
                 />
               </div>
 
-              <div className='absolute top-6 lg:top-10 right-0 w-28 sm:w-40 lg:w-52 h-32 sm:h-44 lg:h-52 overflow-hidden'>
+              <div data-aos='zoom-in' className='absolute top-6 lg:top-10 right-0 w-28 sm:w-40 lg:w-52 h-32 sm:h-44 lg:h-52 overflow-hidden'>
                 <div className='absolute inset-0 ring-1 ring-primary/30 z-10 pointer-events-none' />
                 <img
                   src='/assets/chef-2.webp'
@@ -57,7 +57,7 @@ const page = () => {
                 />
               </div>
 
-              <div className='hidden sm:block absolute bottom-0 right-6 lg:right-8 w-28 sm:w-40 lg:w-52 h-32 sm:h-44 lg:h-52 overflow-hidden'>
+              <div data-aos='zoom-in' className='hidden sm:block absolute bottom-0 right-6 lg:right-8 w-28 sm:w-40 lg:w-52 h-32 sm:h-44 lg:h-52 overflow-hidden'>
                 <div className='absolute inset-0 ring-1 ring-primary/30 z-10 pointer-events-none' />
                 <img
                   src='/assets/chef-3.webp'
@@ -66,7 +66,7 @@ const page = () => {
                 />
               </div>
 
-              <div className='absolute bottom-0 left-0 bg-mist-800 border border-primary/30 px-4 sm:px-6 py-3 sm:py-4'>
+              <div data-aos='zoom-in' className='absolute bottom-0 left-0 bg-mist-800 border border-primary/30 px-4 sm:px-6 py-3 sm:py-4'>
                 <p className='font-stylish text-primary text-base sm:text-lg'>Since 2012</p>
                 <p className='text-white/60 text-xs uppercase tracking-widest mt-1'>Serving Excellence</p>
               </div>
@@ -75,7 +75,7 @@ const page = () => {
 
             <div className='flex flex-col gap-6 lg:gap-8'>
 
-              <div className='flex flex-col gap-4 lg:gap-5'>
+              <div data-aos='fade-left' className='flex flex-col gap-4 lg:gap-5'>
                 <p className='text-white/75 leading-7 lg:leading-8 text-sm sm:text-base'>
                   At <span className='text-primary font-semibold'>DMR Sushi</span>, our story began
                   with a single passion — to bring the art of authentic Japanese sushi to the heart of Europe.
@@ -95,14 +95,14 @@ const page = () => {
               </div>
 
               <div className='flex items-center gap-4'>
-                <span className='h-px flex-1 bg-primary/20'></span>
-                <span className='w-1.5 h-1.5 rotate-45 bg-primary/50'></span>
-                <span className='h-px flex-1 bg-primary/20'></span>
+                <span data-aos='fade-right' className='h-px flex-1 bg-primary/20'></span>
+                <span data-aos='zoom-in' className='w-1.5 h-1.5 rotate-45 bg-primary/50'></span>
+                <span data-aos='fade-left' className='h-px flex-1 bg-primary/20'></span>
               </div>
 
               <div className='grid grid-cols-2 sm:grid-cols-4 gap-3 lg:gap-4'>
                 {stats.map((stat) => (
-                  <div key={stat.label} className='flex flex-col items-center gap-1 border border-primary/20 py-3 lg:py-4 px-2 hover:border-primary/60 transition-colors duration-300'>
+                  <div data-aos='zoom-in' key={stat.label} className='flex flex-col items-center gap-1 border border-primary/20 py-3 lg:py-4 px-2 hover:border-primary/60 transition-colors duration-300'>
                     <span className='font-heading text-xl lg:text-2xl font-bold text-primary'>{stat.value}</span>
                     <span className='text-white/50 text-xs uppercase tracking-wider text-center'>{stat.label}</span>
                   </div>

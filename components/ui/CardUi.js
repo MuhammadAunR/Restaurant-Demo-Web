@@ -8,7 +8,7 @@ const SpecialCard = ({ item }) => {
         router.push('/menu')
     }
     return (
-        <div className='w-70 h-110 flex flex-col bg-mist-800'>
+        <div data-aos='zoom-in' className='w-70 h-110 flex flex-col bg-mist-800'>
 
             <div className='h-55 w-full shrink-0 overflow-hidden'>
                 <img src={item.src} alt={item.name} className='w-full h-full object-cover' />
@@ -34,7 +34,7 @@ export default SpecialCard
 const MenuSectionCard = ({ item, index }) => {
     const isEven = index % 2 === 0;
     return (
-        <div className={`text-white/80 flex max-lg:flex-col ${isEven ? 'flex-row' : 'flex-row-reverse'} items-center justify-center w-full gap-10`}>
+        <div data-aos={isEven ? 'flip-left' : 'flip-right'} className={`text-white/80 flex max-lg:flex-col ${isEven ? 'flex-row' : 'flex-row-reverse'} items-center justify-center w-full gap-10`}>
             <div className='w-full h-60 md:w-150 md:h-95 overflow-hidden'>
                 <img src={item.src} alt={item.name} className='w-full h-full object-cover' />
             </div>
@@ -55,7 +55,7 @@ export const DiningEventCard = ({ type, index }) => {
     const isEven = index % 2 === 0
 
     return (
-        <div className='relative max-md:h-55 max-md:w-full max-lg:w-10/12 max-lg:h-70 w-250 h-85 2xl:w-300 mx-auto 2xl:h-100 overflow-hidden group'>
+        <div data-aos={isEven ? 'flip-left' : 'flip-right'} className='relative max-md:h-55 max-md:w-full max-lg:w-10/12 max-lg:h-70 w-250 h-85 2xl:w-300 mx-auto 2xl:h-100 overflow-hidden group'>
 
             <img
                 src={type.src}

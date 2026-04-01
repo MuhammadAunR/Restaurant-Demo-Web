@@ -42,9 +42,9 @@ const subjects = ['General Inquiry', 'Reservation', 'Private Event', 'Feedback',
 // ── Divider ───────────────────────────────────────────
 const Divider = () => (
     <div className='flex items-center gap-3'>
-        <span className='h-px flex-1' style={{ background: 'linear-gradient(to right, transparent, rgba(245,190,50,0.4))' }} />
-        <span className='w-1.5 h-1.5 rotate-45 bg-primary' />
-        <span className='h-px flex-1' style={{ background: 'linear-gradient(to left, transparent, rgba(245,190,50,0.4))' }} />
+        <span data-aos='fade-right' className='h-px flex-1' style={{ background: 'linear-gradient(to right, transparent, rgba(245,190,50,0.4))' }} />
+        <span data-aos='zoom-in' className='w-1.5 h-1.5 rotate-45 bg-primary' />
+        <span data-aos='fade-left' className='h-px flex-1' style={{ background: 'linear-gradient(to left, transparent, rgba(245,190,50,0.4))' }} />
     </div>
 )
 
@@ -85,7 +85,7 @@ export default function ContactPage() {
     if (submitted) {
         return (
             <div className='min-h-screen bg-mist-900 flex items-center justify-center px-6'>
-                <div className='flex flex-col items-center gap-6 text-center max-w-md'>
+                <div data-aos='fade-up' className='flex flex-col items-center gap-6 text-center max-w-md'>
                     <div className='w-16 h-16 border border-primary flex items-center justify-center'>
                         <CheckCircle size={28} className='text-primary' />
                     </div>
@@ -95,7 +95,6 @@ export default function ContactPage() {
                             Message Sent
                         </h2>
                     </div>
-                    <Divider />
                     <p className='text-white/50 leading-7 text-sm'>
                         Thank you for reaching out, <span className='text-primary'>{form.name}</span>. Our team will get back to you at <span className='text-primary'>{form.email}</span> within 24 hours.
                     </p>
@@ -122,23 +121,23 @@ export default function ContactPage() {
                 <div className='absolute inset-0 pointer-events-none'
                     style={{ background: 'radial-gradient(ellipse 70% 50% at 50% 0%, rgba(245,190,50,0.05) 0%, transparent 70%)' }} />
 
-                <span className='font-stylish text-2xl sm:text-3xl text-primary mb-3 '>
+                <span data-aos='fade-up' className='font-stylish text-2xl sm:text-3xl text-primary mb-3 '>
                     Get in Touch
                 </span>
-                <h1 className='font-heading font-bold uppercase text-primary-light) leading-none mb-4'
-                    style={{ fontSize: 'clamp(2.2rem,7vw,5rem)', letterSpacing: '0.2em' }}>
+                <h1 data-aos='fade-up' className='font-heading font-bold uppercase text-primary-light) leading-none mb-4'
+                    style={{ fontSize: 'clamp(2.2rem,7vw,5rem)', letterSpacing: '0.1em' }}>
                     Contact Us
                 </h1>
                 <div className='w-48'>
                     <Divider />
                 </div>
-                <p className='text-white/40 text-xs tracking-widest uppercase mt-4'>
+                <p data-aos='fade-up' className='text-white/40 text-xs tracking-widest uppercase mt-4'>
                     We'd love to hear from you
                 </p>
             </div>
 
             {/* ── Main Grid ── */}
-            <div className='max-w-6xl mx-auto px-5 sm:px-8 pb-24 grid grid-cols-1 lg:grid-cols-5 gap-0'>
+            <div data-aos='fade-down' className='max-w-6xl mx-auto px-5 sm:px-8 pb-24 grid grid-cols-1 lg:grid-cols-5 gap-0'>
 
                 {/* ── Left Panel ── */}
                 <div className='lg:col-span-2 border border-primary/15 bg-mist-800/50 p-8 sm:p-10 flex flex-col gap-10 lg:border-r-0'>

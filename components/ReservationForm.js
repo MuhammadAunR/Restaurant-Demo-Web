@@ -111,7 +111,7 @@ export default function ReservationForm() {
       <div className='max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start'>
 
         {/* ── Left — Restaurant Info ── */}
-        <div className='flex flex-col gap-10 lg:sticky lg:top-24'>
+        <div data-aos='fade-right' className='flex flex-col gap-10 lg:sticky lg:top-24'>
 
           <div className='flex flex-col gap-3'>
             <span className='font-stylish text-2xl text-primary'>Welcome to</span>
@@ -173,7 +173,7 @@ export default function ReservationForm() {
         </div>
 
         {/* ── Right — Form ── */}
-        <div className='bg-mist-800 border border-primary/15 p-8 flex flex-col gap-7 h-fit min-h-screen'>
+        <div data-aos='fade-left' className='bg-mist-800 border border-primary/15 p-8 flex flex-col gap-7 h-fit min-h-screen'>
 
           <div className='flex flex-col gap-1'>
             <span className='font-stylish text-xl text-primary'>Book a Table</span>

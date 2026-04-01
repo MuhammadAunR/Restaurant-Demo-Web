@@ -30,7 +30,7 @@ const MenuCard = ({ item, featured = false }) => {
     const { addToCart } = useCart()
 
     return (
-        <div className={`relative flex overflow-hidden cursor-pointer border border-primary/20 hover:border-primary/50 transition-all duration-300 group bg-mist-800 ${featured ? 'flex-col sm:flex-row col-span-full' : 'flex-col'}`}>
+        <div data-aos='zoom-in' className={`relative flex overflow-hidden cursor-pointer border border-primary/20 hover:border-primary/50 transition-all duration-300 group bg-mist-800 ${featured ? 'flex-col sm:flex-row col-span-full' : 'flex-col'}`}>
 
             <div className={`relative overflow-hidden bg-mist-900 shrink-0 ${featured ? 'h-52 sm:h-auto sm:w-80' : 'h-48'}`}>
                 {item.src ? (
@@ -126,21 +126,21 @@ export default function MenuPage() {
             <div className='relative min-h-[38vh] flex flex-col items-center justify-center text-center px-6 pt-36 pb-20 overflow-hidden'>
                 <div className='absolute inset-0 pointer-events-none' style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(245,190,50,0.07) 0%, transparent 70%)' }} />
 
-                <p className='font-stylish text-2xl sm:text-3xl text-primary mb-3'>
+                <p data-aos='fade-up' className='font-stylish text-2xl sm:text-3xl text-primary mb-3'>
                     A Culinary Journey
                 </p>
-                <h1
+                <h1 data-aos='fade-up'
                     className='font-bold uppercase text-primary-light leading-none tracking-wide'
                     style={{ fontFamily: 'serif', fontSize: 'clamp(3rem,8vw,6rem)', fontWeight: 300 }}
                 >
                     Our Menu
                 </h1>
                 <div className='flex items-center gap-4 my-5'>
-                    <div className='h-px w-14' style={{ background: 'linear-gradient(to left, transparent, #F5BE32)' }} />
-                    <div className='w-2 h-2 rotate-45 bg-primary' />
-                    <div className='h-px w-14' style={{ background: 'linear-gradient(to right, transparent, #F5BE32)' }} />
+                    <div data-aos='fade-right' className='h-px w-14' style={{ background: 'linear-gradient(to left, transparent, #F5BE32)' }} />
+                    <div data-aos='zoom-in' className='w-2 h-2 rotate-45 bg-primary' />
+                    <div data-aos='fade-left' className='h-px w-14' style={{ background: 'linear-gradient(to right, transparent, #F5BE32)' }} />
                 </div>
-                <p className='text-xs tracking-widest uppercase text-white/35'>
+                <p data-aos='fade-up' className='text-xs tracking-widest uppercase text-white/35'>
                     Handcrafted with the finest ingredients · Est. 2012
                 </p>
             </div>
@@ -163,11 +163,11 @@ export default function MenuPage() {
             <div className='relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-14'>
 
                 {visibleCategories.map((cat, i) => (
-                    <div key={cat.id}>
+                    <div data-aos='fade-right' key={cat.id}>
                         <CategorySection cat={cat} />
 
                         {i === 0 && activeTab === 'all' && (
-                            <div className='border-t border-b border-primary/18 py-10 my-4 mb-16 text-center'
+                            <div data-aos='fade-up' className='border-t border-b border-primary/18 py-10 my-4 mb-16 text-center'
                                 style={{ background: 'linear-gradient(to right, transparent, rgba(245,190,50,0.06), transparent)' }}>
                                 <p className='italic text-white/55 max-w-xl mx-auto leading-8 px-4'
                                     style={{ fontFamily: 'serif', fontSize: 'clamp(0.95rem,2vw,1.25rem)', fontWeight: 300, letterSpacing: '0.03em' }}>

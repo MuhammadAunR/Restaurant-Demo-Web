@@ -3,6 +3,7 @@ import React from 'react'
 import ButtonUi from './ui/ButtonUi'
 import { Map, Phone } from 'lucide-react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 const FooterSection = () => {
 
@@ -33,9 +34,9 @@ const FooterSection = () => {
                         <ButtonUi text={'Reserve a table'} />
                     </span>
 
-                    <div className="logo">
+                    <Link data-aos='zoom-in' href={'/'} className="logo">
                         <img src="../assets/logo.png" alt="DMR SUSHI" className='w-12' />
-                    </div>
+                    </Link>
 
                     <div className='flex items-center justify-center gap-4 px-5 flex-wrap'>
                         <button className='relative group py-1'>

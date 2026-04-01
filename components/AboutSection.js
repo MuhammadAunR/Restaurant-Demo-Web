@@ -13,7 +13,7 @@ const AboutSection = () => {
     return (
         <>
             <section className='bg-mist-900 min-h-screen h-fit relative py-15'>
-                <div className='relative z-10 flex flex-col items-center gap-3 justify-center h-full text-white/80'>
+                <div data-aos='fade-up' className='relative z-10 flex flex-col items-center gap-3 justify-center h-full text-white/80'>
                     <h4 className='font-stylish text-xl tracking-wide'>About Us</h4>
                     <h1 className='text-4xl font-bold uppercase text-center text-primary-light'>
                         Our Story
@@ -25,7 +25,7 @@ const AboutSection = () => {
 
                 <section className='flex max-lg:flex-col items-center gap-10 mx-10 xl:mx-40 py-10'>
 
-                    <div className='flex shrink-0'>
+                    <div data-aos='fade-right' className='flex shrink-0'>
                         <img
                             src="../assets/chef-1.webp"
                             alt="Chef"
@@ -46,7 +46,7 @@ const AboutSection = () => {
 
                     </div>
 
-                    <div className='flex flex-col items-start gap-6 text-white/80 lg:w-1/2'>
+                    <div data-aos='fade-left' className='flex flex-col items-start gap-6 text-white/80 lg:w-1/2'>
                         <p className='text-white/80 leading-relaxed'>
                             At DMR Sushi, our story began with a single passion — to bring the art of
                             authentic Japanese sushi to the heart of Europe. Founded by Chef Damir, a

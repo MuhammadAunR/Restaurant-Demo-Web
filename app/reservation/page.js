@@ -27,7 +27,7 @@ const page = () => {
 
                     <div className='relative z-10 flex flex-col items-center gap-7 justify-center h-full'>
 
-                        <h1 className='text-2xl md:text-4xl lg:text-5xl font-bold uppercase text-center text-primary-light pt-30'>
+                        <h1 data-aos='zoom-out' className='text-2xl md:text-4xl lg:text-5xl font-bold uppercase text-center text-primary-light pt-30'>
                             Table Reservation
                         </h1>
 
