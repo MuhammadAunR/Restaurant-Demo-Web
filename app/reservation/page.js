@@ -4,7 +4,7 @@ import { ArrowLeft } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 
-const Reservation = () => {
+const page = () => {
 
     const router = useRouter()
 
@@ -50,4 +50,4 @@ const Reservation = () => {
     )
 }
 
-export default Reservation
+export default page

@@ -2,10 +2,12 @@
 import React, { useEffect, useState } from 'react'
 import ButtonUi from './ui/ButtonUi'
 import { ArrowUpFromDot } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 const HeroSection = () => {
 
     const [scrollToTopBtn, setScrollToTopBtn] = useState(false)
+    const router = useRouter()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -22,6 +24,10 @@ const HeroSection = () => {
             top: 0,
             behavior: 'smooth'
         })
+    }
+
+    const GoToMenuPage = () => {
+        router.push('/menu')
     }
     return (
 
@@ -45,7 +51,7 @@ const HeroSection = () => {
                     We only use the five star quality for our menu, <br /> come and get the richness in every food we serve.
                 </p>
 
-                <span className='py-4'>
+                <span onClick={GoToMenuPage} className='py-4'>
                     <ButtonUi text={'Go To Menu'} />
                 </span>
 

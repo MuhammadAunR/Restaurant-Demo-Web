@@ -7,7 +7,7 @@ const stats = [
   { value: "6", label: "Award Wins" },
 ]
 
-const AboutUs = () => {
+const page = () => {
   return (
     <section className='bg-mist-900 absolute w-full overflow-hidden text-white top-0'>
 
@@ -133,4 +133,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs
+export default page

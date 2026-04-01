@@ -115,7 +115,7 @@ export default function ReservationForm() {
 
           <div className='flex flex-col gap-3'>
             <span className='font-stylish text-2xl text-primary'>Welcome to</span>
-            <h1 className='font-heading text-4xl xl:text-5xl font-bold uppercase tracking-widest text-primarylight)'>
+            <h1 className='font-heading text-4xl xl:text-5xl font-bold uppercase tracking-widest text-primary-light'>
               DMR Sushi
             </h1>
             <div className='flex items-center gap-3 mt-1'>
@@ -177,7 +177,7 @@ export default function ReservationForm() {
 
           <div className='flex flex-col gap-1'>
             <span className='font-stylish text-xl text-primary'>Book a Table</span>
-            <h2 className='font-heading text-2xl font-bold uppercase tracking-widest text-primarylight)'>
+            <h2 className='font-heading text-2xl font-bold uppercase tracking-widest text-primary-light'>
               Reservation
             </h2>
           </div>
@@ -206,7 +206,7 @@ export default function ReservationForm() {
           <div className='grid grid-cols-2 gap-6'>
             <div className='flex flex-col gap-1.5'>
               <label className={labelClass}>Date <span className='text-primary'>*</span></label>
-              <input type='date' name='date' value={form.date} onChange={handleChange} className={`${inputClass} [color-scheme:dark]`} />
+              <input type='date' name='date' value={form.date} onChange={handleChange} className={`${inputClass} scheme-dark`} />
               {errors.date && <p className='text-red-400 text-xs'>{errors.date}</p>}
             </div>
             <div className='flex flex-col gap-1.5'>

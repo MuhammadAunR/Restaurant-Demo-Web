@@ -1,7 +1,15 @@
+'use client'
 import React from 'react'
 import ButtonUi from './ui/ButtonUi'
+import { useRouter } from 'next/navigation'
 
 const AboutSection = () => {
+    const router = useRouter()
+
+    const GoToAboutPage = () => {
+        router.push('/about')
+    }
+    
     return (
         <>
             <section className='bg-mist-900 min-h-screen h-fit relative py-15'>
@@ -53,7 +61,9 @@ const AboutSection = () => {
                             nothing less than perfection on every plate. We are not just a restaurant.
                             We are a destination for those who appreciate the finer things in life.
                         </p>
-                        <ButtonUi text={'More about us'} />
+                        <span onClick={GoToAboutPage} className=''>
+                            <ButtonUi text={'More about us'} />
+                        </span>
                     </div>
 
                 </section>

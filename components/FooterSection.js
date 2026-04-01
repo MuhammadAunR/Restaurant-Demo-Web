@@ -13,7 +13,7 @@ const FooterSection = () => {
     }
     return (
         <>
-            <section className='absolute min-h-[60vh] top-0 h-fit py-10 w-full'>
+            <section className='absolute min-h-[60vh] top-0 h-fit py-20 w-full'>
                 <img
                     src='../assets/footerSectionBg.webp'
                     alt='hero'
