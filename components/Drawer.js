@@ -31,9 +31,9 @@ const Drawer = () => {
 
                     <div className='flex items-center justify-between py-5 px-7'>
 
-                        <div className="logo">
+                        <Link href={'/'} className="logo">
                             <img src="../assets/logo.png" alt="DMR SUSHI" className='w-12' />
-                        </div>
+                        </Link>
 
                         <span onClick={toggleDrawer} className='text-primary'>
                             <PanelTopClose size={30} />

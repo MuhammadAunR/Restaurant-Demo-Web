@@ -11,7 +11,7 @@ import { useCart } from '@/app/context/CartContext'
 const Navbar = () => {
 
     const { toggleDrawer } = useDrawer()
-    const { toggleCart } = useCart()
+    const { toggleCart, cartCount } = useCart()
 
     const router = useRouter()
     const pathname = usePathname()
@@ -35,9 +35,9 @@ const Navbar = () => {
     return (
         <nav className="flex items-center justify-between py-4 px-7 lg:px-20 bg-transparent backdrop-blur-md fixed w-full max-w-384 z-100">
 
-            <div className="logo">
+            <Link href={'/'} className="logo">
                 <img src="../assets/logo.png" alt="DMR SUSHI" className='w-12' />
-            </div>
+            </Link>
 
             <ul className='flex gap-7 items-center justify-center font-heading text-lg text-white max-lg:hidden'>
                 {navLinks.map((item) => (
@@ -56,8 +56,9 @@ const Navbar = () => {
                     <ButtonUi text={'Reservation'} />
                 </span>
 
-                <span onClick={toggleCart} className='text-primary bg-black/40 hover:bg-black/70 transition-colors ease-linear p-3 rounded-full'>
+                <span onClick={toggleCart} className='text-primary bg-black/40 hover:bg-black/70 transition-colors ease-linear p-3 rounded-full relative'>
                     <ShoppingBag size={22} />
+                    <span className={` ${cartCount ? 'opacity-100' : 'opacity-0'} transition-opacity ease-linear duration-300 absolute -top-1.5 -left-1.5 bg-white/30 text-white flex items-center justify-center w-5 h-5 text-xs rounded-full`}>{cartCount}</span>
                 </span>
 
             </div>
@@ -66,8 +67,9 @@ const Navbar = () => {
                 <button onClick={toggleDrawer} className='text-primary '>
                     <Menu size={30} />
                 </button>
-                <span onClick={toggleCart} className='text-primary hover:text-primary-light transition-colors ease-linear p-3 rounded-full'>
+                <span onClick={toggleCart} className='text-primary bg-black/40 hover:bg-black/70 transition-colors ease-linear p-3 rounded-full relative'>
                     <ShoppingBag size={22} />
+                    <span className={` ${cartCount ? 'opacity-100' : 'opacity-0'} transition-opacity ease-linear duration-300 absolute -top-1.5 -left-1.5 bg-white/30 text-white flex items-center justify-center w-5 h-5 text-xs rounded-full`}>{cartCount}</span>
                 </span>
             </div>
         </nav>
